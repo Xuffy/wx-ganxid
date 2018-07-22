@@ -1,0 +1,64 @@
+/* pages/door/index.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+/* main */
+
+.door_log {
+  background: white;
+  border-bottom: 2rpx solid #e6e6e6;
+  padding: 0rpx 30rpx 5rpx;
+}
+
+.door_log_title {
+  font-size: 30rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+}
+
+.door_log_list view.item {
+  float: left;
+  height: 180rpx;
+  margin: 0rpx 20rpx 20rpx 0rpx;
+  overflow: hidden;
+  width: 180rpx;
+}
+
+.door_log_list view.item image {
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* form */
+
+.form {
+  font-size: 30rpx;
+  margin: 0rpx;
+}
+
+.form::before, .form::after {
+  border: 0rpx;
+}
+
+.form .weui-cell {
+  padding: 0rpx 30rpx;
+}
+
+.form .weui-cell::before {
+  border-color: #f5f5f5;
+  left: 0rpx;
+}
+
+.form_sub {
+  background: white;
+  bottom: 0rpx;
+  color: #37bca1;
+  font-size: 34rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}

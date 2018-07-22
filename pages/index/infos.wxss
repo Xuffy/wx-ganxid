@@ -1,0 +1,95 @@
+/* pages/index/infos.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+swiper {
+  height: 750rpx;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.info {
+  background: white;
+  border-bottom: 2rpx solid #e6e6e6;
+  padding: 20rpx 0rpx 20rpx 20rpx;
+}
+
+.info view {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.info .info_name {
+  font-size: 32rpx;
+}
+
+.info .info_phone {
+  padding-right: 20rpx;
+}
+
+.info .info_phone, .info_addr {
+  color: #666;
+  font-size: 26rpx;
+}
+
+.info .info_phone image, .info_addr image {
+  margin-top: -4rpx;
+  vertical-align: middle;
+  width: 26rpx;
+}
+
+.info .info_phone image.star {
+  float: right;
+  margin: 16rpx 0rpx 0rpx 11rpx;
+  vertical-align: middle;
+  width: 30rpx;
+}
+
+.times {
+  background: white;
+  color: #666;
+  font-size: 26rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 18rpx;
+}
+
+.times text {
+  color: #579cf1;
+}
+
+/*****************************/
+
+.button {
+  background: white;
+  bottom: 0rpx;
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  padding: 20rpx 0rpx;
+  width: 100%;
+  z-index: 10;
+}
+
+.button-item {
+  flex: 1;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.button-item image {
+  margin-right: 20rpx;
+  vertical-align: middle;
+  width: 36rpx;
+}
+
+.button-item:first-child {
+  border-right: 2rpx solid #ddd;
+}

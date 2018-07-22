@@ -1,0 +1,88 @@
+<!--pages/order/preview.wxml-->
+
+<view class="addr">
+
+  <view class="addr_info">
+
+    <view class="addr_info_pre">
+      <image src="/image/img_lable_information.png" mode="widthFix" /> 预约信息
+    </view>
+
+    <navigator url="/pages/user/addr" wx:if="{{addrInfo}}">
+      <view>
+        <view class="addr_info_name">
+          预约人: {{addrInfo.name}}
+          <text>电话: {{addrInfo.phone}}</text>
+        </view>
+        <view class="addr_info_addr">
+          预约地址：{{addrInfo.province}}{{addrInfo.city}}{{addrInfo.label}}{{addrInfo.street}}
+        </view>
+      </view>
+    </navigator>
+
+    <view class="addr_none" wx:else>
+      <image src="/image/img_no_adress.png" mode="widthFix" />
+      <view class="addr_none_txt">
+        暂无收货地址，
+
+        <navigator url="/pages/user/addr">
+          <text>立即添加</text>
+        </navigator>
+      </view>
+    </view>
+
+  </view>
+  <view class="dateTime-box">
+    <view class="label">送洗时间</view>
+    <view class="value">
+      <picker mode="date" value="{{dateTime}}" start="{{startTime}}" bindchange="dateTimeChange">
+        <view class="weui-input">{{dateTime}}</view>
+      </picker>
+    </view>
+  </view>
+
+
+</view>
+
+<view class="addr door">
+
+  <view class="door_info">
+
+    <view class="addr_info_pre">
+      <image src="/image/img_lable_store.png" mode="widthFix" /> 送洗门店
+    </view>
+
+    <view class="list-item clear">
+      <image src="{{info.business_logo}}" mode="widthFix" class="left" />
+      <view class="right">
+        <view class="right_name">
+          {{info.business_name}}
+          <text>营业中</text>
+        </view>
+        <view class="right_phone">
+          <image src="/image/img_list_iphone.png" mode="widthFix" />{{info.tel}}
+        </view>
+        <view class="right_phone right_addr">
+          <image src="/image/img_list_adress.png" mode="widthFix" /> {{info.business_provinceid}}{{info.business_cityid}}{{info.business_countyid}}{{info.business_address}}
+        </view>
+        <view class="right_star">
+          <!-- <image src="/image/icon_star_pressed.png" mode="widthFix" />
+          <image src="/image/icon_star_pressed.png" mode="widthFix" />
+          <image src="/image/icon_star_pressed.png" mode="widthFix" />
+          <image src="/image/icon_star_pressed.png" mode="widthFix" />
+          <image src="/image/icon_star_pressed.png" mode="widthFix" /> -->
+          <image src="/image/icon_star{{info.star > 0 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+          <image src="/image/icon_star{{info.star > 1 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+          <image src="/image/icon_star{{info.star > 2 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+          <image src="/image/icon_star{{info.star > 3 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+          <image src="/image/icon_star{{info.star > 4 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+
+<view class="button" bindtap='submitOrder'>立即预约</view>

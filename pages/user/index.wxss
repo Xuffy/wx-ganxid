@@ -1,0 +1,110 @@
+/* pages/user/index.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.head {
+  background: #37bca1;
+  height: 380rpx;
+  position: relative;
+}
+
+.head_img {
+  border: 4rpx solid #69cdb9;
+  border-radius: 50%;
+  height: 140rpx;
+  left: 50%;
+  margin-left: -70rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 37rpx;
+  width: 140rpx;
+}
+
+.head_img image {
+  width: 100%;
+}
+
+.head_name {
+  color: white;
+  font-size: 34rpx;
+  position: absolute;
+  top: 217rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.head_phone {
+  color: white;
+  font-size: 28rpx;
+  position: absolute;
+  top: 272rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.head_phone image {
+  width: 20rpx;
+}
+
+/* shop */
+
+.shop {
+  background: white;
+  border-radius: 15rpx;
+  margin: -36rpx 20rpx -36rpx;
+  position: relative;
+  padding: 14rpx 0rpx;
+  z-index: 10;
+}
+
+.shop .weui-flex__item {
+  border-right: 2rpx solid #e4e4e4;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.shop .weui-flex__item:last-child {
+  border: 0rpx;
+}
+
+.shop .weui-flex__item image {
+  vertical-align: middle;
+  width: 46rpx;
+}
+
+.shop .weui-flex__name {
+  color: #666;
+  margin-top: 15rpx;
+}
+
+/* list */
+
+.list {
+  padding: 20rpx 20rpx 0rpx;
+}
+
+.list .weui-cells {
+  border-radius: 15rpx;
+}
+
+.list .weui-cells::before, .list .weui-cells::after {
+  border: 0rpx;
+}
+
+.list .weui-cell::before {
+  border-color: #e6e6e6;
+  left: 0rpx;
+}
+
+.list .weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.list .weui-cell__bd {
+  font-size: 34rpx;
+}

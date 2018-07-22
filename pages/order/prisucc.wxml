@@ -1,0 +1,14 @@
+<!--pages/order/prisucc.wxml-->
+
+<view class="icon">
+  <image src="/image/img_success.png" mode="widthFix" />
+</view>
+<view class="icon_text">预约成功</view>
+<view>
+
+  <!-- <navigator url="/pages/order/index">
+    <view class="icon_btn" bindtap="goUrl">查看订单详情</view>
+  </navigator> -->
+
+    <view class="icon_btn" bindtap="goUrl">查看订单详情</view>
+</view>

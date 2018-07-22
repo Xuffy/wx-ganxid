@@ -1,0 +1,52 @@
+/* pages/user/addr.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.list::after, .list::before {
+  border: 0rpx;
+}
+
+.list .weui-cell::before {
+  left: 0rpx;
+}
+
+.list .weui-cell__bd {
+  color: #747474;
+  font-size: 26rpx;
+}
+
+.list .weui-cell__bd image {
+  margin-top: -6rpx;
+  vertical-align: middle;
+  width: 36rpx;
+}
+
+.list .weui-cell__ft image {
+  margin-top: -6rpx;
+  vertical-align: middle;
+  width: 30rpx;
+}
+
+.list .weui-cell__ft view.option {
+  display: inline-block;
+  margin-left: 40rpx;
+}
+
+/*********************/
+
+.button {
+  background: #37bca1;
+  border-radius: 8rpx;
+  bottom: 33rpx;
+  color: white;
+  font-size: 34rpx;
+  height: 88rpx;
+  left: 50%;
+  line-height: 88rpx;
+  margin-left: -320rpx;
+  position: fixed;
+  text-align: center;
+  width: 640rpx;
+}

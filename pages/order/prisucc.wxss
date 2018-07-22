@@ -1,0 +1,34 @@
+/* pages/order/prisucc.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.icon {
+  margin-top: 100rpx;
+  text-align: center;
+}
+
+.icon image {
+  vertical-align: middle;
+  width: 120rpx;
+}
+
+.icon_text {
+  font-size: 34rpx;
+  height: 116rpx;
+  line-height: 116rpx;
+  text-align: center;
+}
+
+.icon_btn {
+  background: #37bca1;
+  border-radius: 4rpx;
+  color: white;
+  font-size: 32rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  margin: auto;
+  text-align: center;
+  width: 260rpx;
+}

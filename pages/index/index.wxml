@@ -1,0 +1,52 @@
+<!--index.wxml-->
+
+<view class="topbar clear">
+  <view class="topbar-item">
+    <text class="{{listype==0?'active':''}}" id="0" bindtap='changeType'>地图</text>
+  </view>
+  <view class="topbar-item">
+    <text class="{{listype==1?'active':''}}" id="1" bindtap='changeType'>列表</text>
+  </view>
+</view>
+
+<view class="map_container" hidden="{{listype==1?true:false}}">
+  <map id="map" markers="{{markers}}" bindcallouttap="clickMap" longitude="{{longitude}}" latitude="{{latitude}}" style="width: 100%; height: 100%;"></map>
+</view>
+
+<view class="list" hidden="{{listype==0?true:false}}">
+
+  <swiper indicator-dots="true" interval="3000" duration="500">
+    <block wx:for="{{bannerList}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item.imgs}}" class="slide-image" mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--LIST-->
+  <navigator url="/pages/index/infos?id={{item.business_id}}" class="list-item clear" wx:for="{{dataList}}" wx:key="business_id">
+    <image src="{{item.business_logo}}" mode="widthFix" class="left" />
+    <view class="right">
+      <view class="right_phone">
+        <image src="/image/img_list_iphone.png" mode="widthFix" />{{item.tel}}
+      </view>
+      <view class="right_phone right_addr">
+        <image src="/image/img_list_adress.png" mode="widthFix" /> {{item.business_provinceid}}{{item.business_cityid}}{{item.business_countyid}}{{item.business_address}}
+      </view>
+      <view class="right_star">
+        <!-- <image wx:if="{{item.star > 0}}" src="/image/icon_star_pressed.png" mode="widthFix" />
+        <image wx:if="{{item.star > 1}}" src="/image/icon_star_pressed.png" mode="widthFix" />
+        <image wx:if="{{item.star > 2}}" src="/image/icon_star_pressed.png" mode="widthFix" />
+        <image wx:if="{{item.star > 3}}" src="/image/icon_star_pressed.png" mode="widthFix" />
+        <image wx:if="{{item.star > 4}}" src="/image/icon_star_pressed.png" mode="widthFix" /> -->
+
+        <image src="/image/icon_star{{item.star > 0 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+        <image src="/image/icon_star{{item.star > 1 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+        <image src="/image/icon_star{{item.star > 2 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+        <image src="/image/icon_star{{item.star > 3 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+        <image src="/image/icon_star{{item.star > 4 ? '_pressed' : ''}}.png" mode="widthFix" class="star" />
+      </view>
+    </view>
+  </navigator>
+
+</view>

@@ -1,0 +1,49 @@
+<!--pages/user/index.wxml-->
+
+<view class="head">
+
+  <view class="head_img">
+    <image src="{{info.headimgurl}}" mode="widthFix" />
+  </view>
+  <view class="head_name">{{info.nickname}}</view>
+  <view class="head_phone">
+    <image src="/image/img_iphine.png" mode="widthFix" /> {{info.phone || '未绑定'}}
+  </view>
+
+</view>
+
+<view class="shop" wx:if="{{info.type === '3'}}">
+
+  <view class="weui-flex">
+    <navigator url="/pages/door/index" class="weui-flex__item">
+      <image src="/image/icon_message_stoure.png" mode="widthFix" />
+      <view class="weui-flex__name">门店信息</view>
+    </navigator>
+    <navigator url="/pages/door/order" class="weui-flex__item">
+      <image src="/image/icon_oeder_store.png" mode="widthFix" />
+      <view class="weui-flex__name">门店订单</view>
+    </navigator>
+  </view>
+
+</view>
+
+<view class="list">
+
+  <view class="weui-cells">
+    <navigator url="/pages/user/phone" class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/icon_mine_iphone.png" mode="widthFix"></image>
+      </view>
+      <view class="weui-cell__bd">手机号码</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/user/addr" class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/icon_mine_adress.png" mode="widthFix"></image>
+      </view>
+      <view class="weui-cell__bd">地址管理</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+
+</view>

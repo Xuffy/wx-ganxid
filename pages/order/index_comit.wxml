@@ -1,0 +1,47 @@
+<!--pages/order/index_comit.wxml-->
+
+<view class="list-item">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">
+      <image src="/image/img_lable_details.png" mode="widthFix" />订单信息
+    </view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{info.businessinfo.business_logo}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{info.name}}</view>
+          <view class="weui-media-box__desc" style="margin-top:8rpx;">类型: {{info.typename}}</view>
+          <view class="weui-media-box__desc" style="margin-top:8rpx;">预约时间: {{info.dotime}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-panel__ft info-box">
+      <view class="weui-panel__ft_desc">订单编号: {{info.sn}}</view>
+      <view class="weui-panel__ft_desc">下单时间: {{info.times}}</view>
+      <view class="weui-panel__ft_desc">送洗时间: {{info.trantime || ''}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="list-item list-item2">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">
+      <image src="/image/img_lable_details.png" mode="widthFix" />星级评价
+    </view>
+    <view class="weui-panel__bd">
+
+      <view class="list-star">
+        <image src="/image/icon_star{{points > 0 ? '_pressed' : ''}}.png" mode="widthFix" id="1" bindtap="changePoints" />
+        <image src="/image/icon_star{{points > 1 ? '_pressed' : ''}}.png" mode="widthFix" id="2" bindtap="changePoints" />
+        <image src="/image/icon_star{{points > 2 ? '_pressed' : ''}}.png" mode="widthFix" id="3" bindtap="changePoints" />
+        <image src="/image/icon_star{{points > 3 ? '_pressed' : ''}}.png" mode="widthFix" id="4" bindtap="changePoints" />
+        <image src="/image/icon_star{{points > 4 ? '_pressed' : ''}}.png" mode="widthFix" id="5" bindtap="changePoints"/>
+      </view>
+
+      <view class="list-button" bindtap="submit">确认评价</view>
+
+    </view>
+  </view>
+</view>

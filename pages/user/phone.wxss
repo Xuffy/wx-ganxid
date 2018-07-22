@@ -1,0 +1,61 @@
+/* pages/user/phone.wxss */
+
+.top_bind {
+  background: #f5f5f5;
+  color: #999;
+  font-size: 26rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 23rpx;
+}
+
+.form {
+  padding: 0rpx 20rpx;
+}
+
+.form-title {
+  font-size: 32rpx;
+  height: 103rpx;
+  line-height: 103rpx;
+}
+
+.form-input {
+  position: relative;
+}
+
+.form-input input {
+  border: 2rpx solid #d9d9d9;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  height: 90rpx;
+  padding: 15rpx 25rpx;
+  width: 100%;
+}
+
+.form-input button {
+  background: white;
+  border: 0rpx;
+  border-radius: 0rpx;
+  color: #37bca1;
+  height: 90rpx;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  text-align: center;
+  width: 192rpx;
+}
+
+.form-inar {
+  margin-top: 30rpx;
+}
+
+.form-submit {
+  background: #37bca1;
+  color: white;
+  height: 88rpx;
+  margin: 60rpx auto 0rpx;
+  width: 640rpx;
+}

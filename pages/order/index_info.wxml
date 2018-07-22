@@ -1,0 +1,65 @@
+<!--pages/order/index_info.wxml-->
+
+<view class="top"></view>
+
+<view class="main">
+
+  <view class="state">
+    <image src="/image/img_state_wait.png" mode="widthFix" /> 
+    <text class="fini" wx:if="{{info.status === '0'}}">待接单</text>
+    <text class="fini" wx:elif="{{info.status === '1'}}">已接单</text>
+    <text class="fini" wx:elif="{{info.status === '2'}}">完成</text>
+    <text class="fini" wx:elif="{{info.status === '3'}}">已评价</text>
+    <text class="wait" wx:elif="{{info.status === '4'}}">不接单</text>
+    <text class="fini" wx:elif="{{info.status === '5'}}">取消订单</text>
+  </view>
+
+  <view class="addr_info">
+    <view class="addr_info_pre">
+      <image src="/image/img_lable_information.png" mode="widthFix" /> 预约信息
+    </view>
+    <view class="addr_info_name">
+      预约人: {{info.name}}
+      <text>电话: {{info.phone}}</text>
+    </view>
+    <view class="addr_info_addr">
+      预约地址：{{info.addr}}
+    </view>
+  </view>
+
+  <view class="list-item">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">
+        <image src="/image/img_lable_details.png" mode="widthFix" />订单信息
+      </view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{info.businessinfo.business_logo}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{info.businessinfo.business_name}}</view>
+            <view class="weui-media-box__desc" style="margin-top:8rpx;">类型: {{info.typename}}</view>
+            <view class="weui-media-box__desc" style="margin-top:8rpx;">预约时间: {{info.dotime}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-panel__ft">
+        <view class="weui-panel__ft_desc">订单编号: {{info.sn}}</view>
+        <view class="weui-panel__ft_desc">下单时间: {{info.times}}</view>
+        <view class="weui-panel__ft_desc">送洗时间: {{info.trantime || ''}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class="buttons">
+
+  <view class="buttons-button" wx:if="{{info.status === '1' || info.status === '0'}}" bindtap="cancelOrder" id="{{info.sn}}">取消订单</view>
+
+  <navigator url="/pages/order/index_comit?sn={{info.sn}}" wx:if="{{info.status === '2'}}">
+    <view class="buttons-button buttons-button-act">去评价</view>
+  </navigator>
+
+</view>

@@ -1,0 +1,38 @@
+<!--pages/user/addr.wxml-->
+
+<view class="weui-panel weui-panel_access list" wx:for="{{dataList}}" wx:key="item.id">
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">
+        {{item.name}} {{item.phone}}
+      </view>
+      <view class="weui-media-box__desc">
+        {{item.province}}{{item.city}}{{item.label}}{{item.street}}
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd" style="visibility: {{item.status === '1' ? '' : 'hidden'}}">
+        <image src="/image/icon_choosed.png" mode="widthFix" /> 默认地址
+      </view>
+      <view class="weui-cell__ft">
+        <navigator url="/pages/user/addr_add?id={{item.id}}" style="display: inline-block">
+          <view class="option">
+            编辑
+            <image src="/image/icon_edit.png" mode="widthFix" />
+          </view>
+        </navigator>
+        <view class="option" bindtap="deleteAddress" id="{{item.id}}">
+          删除
+          <image src="/image/icon_delete.png" mode="widthFix" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style="height:150rpx"></view>
+<view class="btn-box">
+  <navigator url="/pages/user/addr_add" class="button">添加新地址</navigator>
+</view>

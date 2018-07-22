@@ -1,0 +1,68 @@
+/* pages/door/order.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+/***/
+
+.list {
+  padding: 0rpx;
+}
+
+.list-item {
+  background: white;
+  margin-top: 10rpx;
+}
+
+.list-item .weui-panel::after,.list-item .weui-panel::before {
+  border: 0rpx;
+}
+
+.list-item:first-child {
+  margin: 0rpx;
+}
+
+.list-item .weui-panel__hd {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.list-item .weui-panel__hd text {
+  float: right;
+}
+
+.list-item .weui-panel__hd text.wait {
+  color: #ff3131;
+}
+
+.list-item .weui-panel__hd text.fini {
+  color: #999;
+}
+
+.list-item .weui-panel__hd::after {
+  border-color: #e6e6e6;
+}
+
+.list-item .weui-cell::before {
+  border-top: 2rpx dotted #e6e6e6;
+  left: 0rpx;
+}
+
+.list-button {
+  border: 1px solid #cdcdcd;
+  border-radius: 27rpx;
+  color: #666;
+  font-size: 28rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  width: 150rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.list-button-act {
+  border-color: #37bca1;
+  color: #37bca1;
+}

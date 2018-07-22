@@ -1,0 +1,120 @@
+/**index.wxss**/
+
+.topbar {
+  background: #37bca1;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.topbar .topbar-item {
+  border-bottom: 4rpx solid #37bca1;
+  color: white;
+  float: left;
+  font-size: 30rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  width: 50%;
+}
+
+.topbar .topbar-item text {
+  border-bottom: 2rpx solid #37bca1;
+  display: inline-block;
+  width: 180rpx;
+}
+
+.topbar .topbar-item text.active {
+  border-bottom: 2rpx solid white;
+}
+
+/************AMAP********************/
+
+.map_container {
+  position: absolute;
+  top: 84rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/************typelist********************/
+
+.list {
+  position: absolute;
+  top: 84rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.list swiper {
+  height: 350rpx;
+  overflow: hidden;
+}
+
+.list swiper-item image {
+  width: 100%;
+}
+
+.list-item {
+  padding: 20rpx 0rpx 20rpx 20rpx;
+  position: relative;
+}
+
+.list-item::before {
+  bottom: 0rpx;
+  background: #e6e6e6;
+  display: table;
+  content: " ";
+  height: 2rpx;
+  left: 20rpx;
+  position: absolute;
+  width: 100%;
+}
+
+.list-item:last-child::before {
+  background: white;
+}
+
+.list-item image.left {
+  /* float: left; */
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 200rpx;
+  max-height: 100rpx;
+}
+
+.list-item .right {
+  /* float: left; */
+  display: inline-block;
+  margin-left: 35rpx;
+  vertical-align: middle;
+}
+
+.list-item .right_name {
+  font-size: 32rpx;
+}
+
+.list-item .right_phone {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 15rpx;
+}
+
+.list-item .right_phone image {
+  margin-right: 10rpx;
+  width: 22rpx;
+}
+
+.list-item .right_addr {
+  margin-top: 11rpx;
+  width: 100%;
+}
+
+.list-item .right_star image {
+  margin-right: 11rpx;
+  vertical-align: middle;
+  width: 30rpx;
+}
+

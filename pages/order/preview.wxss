@@ -1,0 +1,184 @@
+/* pages/order/preview.wxss */
+
+page {
+  background: #f5f5f5;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.addr {
+  background: white;
+  border-radius: 8rpx;
+}
+
+.addr_none {
+  text-align: center;
+}
+
+.addr_none image {
+  vertical-align: middle;
+  width: 180rpx;
+}
+
+.addr_none_txt {
+  font-size: 28rpx;
+  margin: 20rpx 0rpx 50rpx;
+  text-align: center;
+}
+
+.addr_none_txt text {
+  color: #37bca1;
+}
+
+.addr_info {
+  border-bottom: 2rpx solid #e6e6e6;
+  padding: 0px 35rpx;
+}
+
+.addr_info_pre {
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 74rpx;
+  line-height: 74rpx;
+}
+
+.addr_info_pre image {
+  margin-right: 18rpx;
+  vertical-align: middle;
+  width: 36rpx;
+}
+
+.addr_info_name {
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 7rpx;
+}
+
+.addr_info_name text {
+  margin-left: 160rpx;
+}
+
+.addr_info_addr {
+  color: #666;
+  font-size: 26rpx;
+  min-height: 50rpx;
+  line-height: 50rpx;
+}
+
+.addr_time {
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0px 35rpx;
+  display: inline-block;
+}
+
+.dateTime-box {
+  font-size: 30rpx;
+  padding: 0px 35rpx;
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.dateTime-box .label{
+  display: inline-block;
+}
+
+.dateTime-box .value{
+  display: inline-block;
+  position: absolute;
+  right: 35rpx;
+  top: 0;
+  line-height: 80rpx;
+  min-width: 100rpx;
+}
+
+/* .addr_time input {
+  float: right;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  width: 200rpx;
+} */
+
+.door {
+  margin-top: 20rpx;
+  padding-bottom: 18rpx;
+}
+
+.door_info {
+  padding: 0px 35rpx;
+}
+
+/*****************/
+
+.list-item {
+  margin-top: 38rpx;
+}
+
+.list-item image.left {
+  float: left;
+  vertical-align: middle;
+  width: 200rpx;
+}
+
+.list-item .right {
+  float: left;
+  margin-left: 24rpx;
+  width: 416rpx;
+}
+
+.list-item .right_name {
+  font-size: 32rpx;
+}
+
+.list-item .right_name text {
+  background: #73d9b4;
+  color: white;
+  display: inline-block;
+  font-size: 24rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-left: 10rpx;
+  text-align: center;
+  width: 96rpx;
+}
+
+.list-item .right_phone {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+
+.list-item .right_phone image {
+  margin-right: 10rpx;
+  width: 22rpx;
+}
+
+.list-item .right_addr {
+  margin-top: 5rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.list-item .right_star image {
+  margin-right: 11rpx;
+  vertical-align: middle;
+  width: 30rpx;
+}
+
+.button {
+  bottom: 0rpx;
+  background: white;
+  color: #37bca1;
+  font-size: 34rpx;
+  height: 100rpx;
+  left: 0rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}

@@ -1,0 +1,88 @@
+/* pages/order/index.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.topbar {
+  background: #37bca1;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.topbar .topbar-item {
+  border-bottom: 4rpx solid #37bca1;
+  color: white;
+  float: left;
+  font-size: 30rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  width: 25%;
+}
+
+.topbar .topbar-item text {
+  border-bottom: 2rpx solid #37bca1;
+  display: inline-block;
+  width: 180rpx;
+}
+
+.topbar .topbar-item text.active {
+  border-bottom: 2rpx solid white;
+}
+
+/************MAIN********************/
+
+.list {
+  padding: 88rpx 10rpx 0rpx;
+}
+
+.list-item {
+  background: white;
+  border-radius: 8rpx;
+  margin-top: 10rpx;
+}
+
+.list-item .weui-panel__hd {
+  color: #666;
+  font-size: 30rpx;
+}
+
+.list-item .weui-panel__hd text {
+  float: right;
+}
+
+.list-item .weui-panel__hd text.wait {
+  color: #ff3131;
+}
+
+.list-item .weui-panel__hd text.fini {
+  color: #999;
+}
+
+.list-item .weui-panel__hd::after {
+  border-color: #e6e6e6;
+  left: 0rpx;
+}
+
+.list-item .weui-cell::before {
+  border-color: #e6e6e6;
+  left: 0rpx;
+}
+
+.list-button {
+  border: 1px solid #cdcdcd;
+  border-radius: 27rpx;
+  color: #666;
+  font-size: 28rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  width: 150rpx;
+}
+
+.list-button-act {
+  border-color: #37bca1;
+  color: #37bca1;
+}

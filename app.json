@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/infos",
+    "pages/order/index",
+    "pages/order/index_info",
+    "pages/order/index_comit",
+    "pages/order/preview",
+    "pages/order/prisucc",
+    "pages/user/index",
+    "pages/user/phone",
+    "pages/user/addr",
+    "pages/user/addr_add",
+    "pages/door/index",
+    "pages/door/order",
+    "pages/door/order_info",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#37BCA1",
+    "navigationBarTitleText": "干洗店",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "backgroundColor": "#FEFEFE",
+    "color": "#8F8F8F",
+    "selectedColor": "#37BCA1",
+    "list": [
+      {
+        "iconPath": "image/icon_tab_shtore.png",
+        "selectedIconPath": "image/icon_tab_shtore_pressed.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "image/icon_tab_order.png",
+        "selectedIconPath": "image/icon_tab_order_pressed.png",
+        "pagePath": "pages/order/index",
+        "text": "订单"
+      },
+      {
+        "iconPath": "image/icon_tab_mine.png",
+        "selectedIconPath": "image/icon_tab_mine_pressed.png",
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

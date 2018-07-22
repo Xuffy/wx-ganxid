@@ -1,0 +1,44 @@
+<!--pages/door/order.wxml-->
+
+<view class="list">
+
+  <view class="list-item" wx:for="{{dataList}}" wx:key="item.id">
+    <navigator url="/pages/door/order_info?sn={{item.sn}}" class="weui-panel">
+      <view class="weui-panel__hd">
+        订单号: {{item.sn}}
+        <!-- <text class="wait">待接单</text>
+        <text class="fini" hidden="1">已完成</text>
+        <text class="fini" hidden="1">已取消</text> -->
+        <text class="fini" wx:if="{{item.status === '0'}}">待接单</text>
+        <text class="fini" wx:elif="{{item.status === '1'}}">已接单</text>
+        <text class="fini" wx:elif="{{item.status === '2'}}">完成</text>
+        <text class="fini" wx:elif="{{item.status === '3'}}">已评价</text>
+        <text class="wait" wx:elif="{{item.status === '4'}}">不接单</text>
+        <text class="fini" wx:elif="{{item.status === '5'}}">取消订单</text>
+      </view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{item.businessinfo.business_logo}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{item.businessinfo.business_name}}</view>
+            <view class="weui-media-box__desc" style="margin-top:8rpx;">类型: {{item.typename}}</view>
+            <view class="weui-media-box__desc" style="margin-top:8rpx;">预约时间: {{item.dotime}}</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <view class="weui-panel__ft">
+      <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd"></view>
+        <view class="weui-cell__ft">
+          <view class="list-button" wx:if="{{item.status === '0'}}" id="{{item.sn}}" bindtap="cancelOrder">不接单</view>
+          <view class="list-button list-button-act" wx:if="{{item.status === '0'}}" id="{{item.sn}}" bindtap="agreeOrder">接单</view>
+          <view class="list-button list-button-act" wx:if="{{item.status === '1'}}" id="{{item.sn}}" bindtap="completeOrder">完成</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

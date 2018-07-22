@@ -1,0 +1,25 @@
+/**app.wxss**/
+@import 'libs/weui/weui.wxss';
+
+.clear::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.image-box {
+  display: inline-block;
+  text-align: center;
+}
+
+.image-box::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.image-box image {
+  max-height: 100%;
+  max-width: 100%;
+}

@@ -1,0 +1,65 @@
+/* pages/order/index_comit.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+/* order */
+
+.list-item {
+  background: white;
+  border-radius: 8rpx;
+}
+
+.list-item .weui-panel::before, .list-item .weui-panel::after {
+  border: 0rpx;
+}
+
+.list-item2 {
+  margin-top: 12rpx;
+}
+
+.list-item .weui-panel__hd {
+  color: #222;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 26rpx 30rpx;
+}
+
+.list-item .weui-panel__hd image {
+  margin-right: 18rpx;
+  vertical-align: middle;
+  width: 36rpx;
+}
+
+.list-item .weui-panel__hd::after {
+  border: 0rpx;
+}
+
+.list-star {
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.list-star image {
+  margin: 0rpx 17rpx;
+  vertical-align: middle;
+  width: 54rpx;
+}
+
+.list-button {
+  border-radius: 8rpx;
+  background: #37bca1;
+  color: white;
+  font-size: 34rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  margin: 60rpx auto 44rpx;
+  text-align: center;
+  width: 340rpx;
+}
+
+.info-box{
+  font-size: 30rpx;
+  padding-left: 35rpx;
+}
